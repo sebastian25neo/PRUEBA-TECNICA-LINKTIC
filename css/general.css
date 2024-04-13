@@ -1,0 +1,225 @@
+
+
+/****
+
+/****
+***ESTILOS INPUT-SELECT,...
+****/
+label{
+    font-size:0.8rem !important;
+}
+
+.selector {
+    position: relative;
+}
+
+.ajustelabel {
+    position: absolute
+}
+
+.selector .prefix {
+    position: absolute;
+    top: .25rem;
+    font-size: 1.75rem;
+    transition: color .2s;
+}
+
+.ajuste {
+    margin-left: 2.5rem;
+    width: calc(100% - 2.5rem);
+}
+
+.selector label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 1rem;
+    transform-origin: 0px 100%;
+    transform: translateY(12px);
+    cursor: text;
+    color: rgb(117, 117, 117);
+    transition: transform 0.2s ease-out 0s, color 0.2s ease-out 0s;
+    z-index: 2;
+}
+
+.selector label.active {
+    transform: translateY(-32px) scale(0.9);
+    font-weight: 500;
+}
+
+input {
+    /*background-color: #0000ff0a !important;*/
+    padding-left: 5px !important;
+}
+
+.estiloFormulario input:focus:not([readonly]),
+.estiloFormulario select:focus:not([readonly]) {
+    border-color: #4285f4;
+    box-shadow: inset 0 0 0 1px #4285f4;
+}
+
+.estiloFormulario input:focus:not([readonly])+label.bonito,
+.estiloFormulario select:focus:not([readonly])+label.bonito {
+    border-color: #4285f4;
+    box-shadow: inset 0 0 0 1px #4285f4;
+    color: #4285f4;
+}
+
+.estiloFormulario input {
+    border-color: #0D9EEC;
+    box-shadow: inset 0 0 0 1px #0D9EEC;
+}
+
+.estiloFormulario input+label.bonito {
+    border-color: #0D9EEC;
+    box-shadow: inset 0 0 0 1px #0D9EEC;
+    color: #0D9EEC;
+}
+
+.estiloFormulario .valid {
+    border-color: green !important;
+    box-shadow: inset 0 0 0 1px green !important;
+}
+
+.estiloFormulario .valid+label.bonito {
+    border-color: #42f486 !important;
+    box-shadow: inset 0 0 0 1px #42f47d !important;
+    color: #6bf442 !important;
+}
+
+.error {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color:red;
+}
+
+.valid {
+  
+    color:green;
+}
+
+.estiloFormulario>.error {
+    border-color: rgb(235, 13, 24) !important;
+    box-shadow: inset 0 0 0 1px rgb(238, 8, 27) !important;
+}
+
+.estiloFormulario > .error > .select2 > .selection > .select2-container--default .select2-selection--single {
+	border: 23px solid red !important;
+}
+
+.estiloFormulario>.error+label.bonito {
+    border-color: rgb(235, 13, 24) !important;
+    box-shadow: inset 0 0 0 1px rgb(238, 8, 27) !important;
+    color: #f44251 !important;
+}
+/* 
+.estiloFormulario label.bonito {
+    -webkit-transform: translateY(-15px) scale(0.8);
+    transform: translateY(-15px) scale(0.8);
+    background: #fff;
+    font-weight: 500;
+    padding-right: 5px;
+    padding-left: 5px;
+    left: 8px;
+} */
+
+/* .estiloFormulario label.proveedor {
+    -webkit-transform: translateY(-15px) scale(0.8);
+    transform: translateY(-15px) scale(0.8);
+    background: #fff;
+    font-weight: 500;
+    padding-right: 0px;
+    padding-left: 0px;
+    left: 0.9rem;
+} */
+
+/* .select2-selection__arrow {
+    margin-right: 8%;
+}
+
+.estiloFormulario .prefix~input+label.bonito,
+.estiloFormulario .prefix~select+label.bonito {
+    margin-left: 2rem;
+} */
+
+/* .estiloFormulario {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} */
+
+/* .estiloFormulario .prefix {
+    position: absolute;
+    transition: color 0.2s;
+    top: 0.6rem;
+    font-size: 20px;
+} */
+/* 
+.estiloFormulario .prefix~input,
+.estiloFormulario .prefix~select {
+    margin-left: 2rem;
+    width: calc(100% - 2rem);
+} */
+
+/* .estiloFormulario label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+    cursor: text;
+    color: #757575;
+} */
+
+
+
+/****
+***END ESTILOS INPUT
+****/
+
+
+/*TABLAS*/
+/* table.table td, table.table th {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    vertical-align: middle;
+}
+
+.dataTables_info {
+    font-size: 0.6rem;
+} */
+
+/*END TABLAS*/
+
+
+/*Fin estilos eventos*/
+/*ESTILO SELECT2*/
+.select2-container--default .select2-selection--single {
+    /*    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;*/
+    height: 36px !important;
+    padding-top: 3px;
+}
+
+/*end*/
+
+
+/*ESTILOS SELECT SELECT2 OJO*/
+select.error + .select2 > .selection > .select2-selection.select2-selection--single {
+    border: 2px solid red !important;
+}
+
+select.valid + .select2 > .selection > .select2-selection.select2-selection--single {
+    border: 2px solid green !important;
+}
+/*END*/
+
+
+
+main{
+    margin-bottom: 100px;
+}

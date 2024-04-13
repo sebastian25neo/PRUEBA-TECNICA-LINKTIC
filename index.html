@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!--    Datatables  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/> 
+    <link rel="stylesheet" href="./css/general.css">
+        <!-- Sweet Alerts V8.13.0 CSS file -->
+        <link rel="stylesheet" href="./css/sweetalert2.min.css"> 
+    <title>Dependencia </title>
+
+    <style>
+        table.dataTable thead {
+            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+            color:white;
+        }
+    </style>
+
+  </head>
+  <body>
+
+
+
+    <h1 class="display-12">PRUEBA TECNICA DE LINKTIC </h1>
+    <hr class="bg-info" />
+    
+    <div class="container">
+       <div class="row">
+       
+           <div class="col-lg-12">
+            <div class="text-center my-3">
+                <button class="btn btn-block btn-primary" onclick="location.href='./Usuarios/index.html'">Crear Usuairo</button>
+                
+                </div>
+            <table id="tablaUsuarios" class="table-striped table-bordered" style="width:100%">
+                <thead>
+                 <tr>
+                                 <th>DOCUMENTO</th>
+                                 <th>NOMBRE</th>                                
+                                 <th>APELLIDO</th>  
+                                 <th>CELULAR</th>
+                                 <th>DIRECCIÓN</th>
+                                 <th>EDITAR</th>
+                                 <th>ELIMINAR</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+           </div>
+       </div> 
+    </div>
+
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+          <!-- Contenido del modal para editar usuario -->
+          <span class="close">&times;</span>
+          <div class="row justify-content-center estiloFormulario">
+            <div class="col-md-6">
+            <h1 class="display-4">Usuarios</h1>
+                <hr class="bg-info" />
+            <form id="formAdd">
+             
+                <div class=" col-md-12">
+                    <div class="error"></div>
+                    <div class="form-group">
+                        <label for="usuairoDocumento" class="bonito">DOCUMENTO USUARIOS:</label>
+                        <input type="text" class="form-control" name="usuairoDocumento" id="usuairoDocumento"
+                            maxlength="27">
+                        <div for="usuairoDocumento"></div>
+                    </div>
+                </div> 
+
+
+                <div class=" col-md-12">
+                    <div class="error"></div>
+                    <div class="form-group">
+                        <label for="usuairoNombre" class="bonito">NOMBRE USUARIOS:</label>
+                        <input type="text" class="form-control" name="usuairoNombre" id="usuairoNombre"
+                            maxlength="27">
+                        <div for="usuairoNombre"></div>
+                    </div>
+                </div>
+                <div class=" col-md-12">
+                    <div class="error"></div>
+                    <div class="form-group">
+                        <label for="usuarioApellido" class="bonito">APELLIDO USUARIOS:</label>
+                        <input type="text" class="form-control" name="usuarioApellido" id="usuarioApellido"
+                            maxlength="27">
+                        <div for="usuarioApellido"></div>
+                    </div>
+                </div>
+                <div class=" col-md-12">
+                    <div class="error"></div>
+                    <div class="form-group">
+                        <label for="usuarioCelular" class="bonito">NUMERO DE CELULAR USUARIOS:</label>
+                        <input type="text" class="form-control" name="usuarioCelular" id="usuarioCelular"
+                            maxlength="27">
+                        <div for="usuarioCelular"></div>
+                    </div>
+                </div>
+
+                <div class=" col-md-12">
+                    <div class="error"></div>
+                    <div class="form-group">
+                        <label for="usuarioDireccion" class="bonito">DIRECCIÓN USUARIOS:</label>
+                        <input type="text" class="form-control" name="usuarioDireccion" id="usuarioDireccion"
+                            maxlength="27">
+                        <div for="usuarioDireccion"></div>
+                    </div>
+                </div>
+
+               <div class="text-center my-3">
+                <button type="button"  class="btn btn-danger"  id="btnCancelar">Cancelar</button>
+                <button  type="button" class="btn btn-success"  id="btnEnviar">Guardar</button>
+                
+                </div>
+
+                 </form>    
+            </div>
+
+
+     </div>
+         
+        </div>
+      </div>
+    
+   
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script> 
+<!--    Datatables-->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  
+      <!-- jQuery validate-->
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/appIndex.js" ></script>
+      
+  </body>
+</html>
